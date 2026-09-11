@@ -1,0 +1,39 @@
+/* Cohesive art enhancement; campaign mechanics and layouts are unchanged. */
+#start-screen{background:#080f18 url('assets/generated/menu-city.webp') center/cover!important}
+#start-screen:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#07101af0,#07101a80 52%,#07101a15);pointer-events:none}
+#start-screen .start-art{display:none!important}
+#start-screen .start-copy{position:relative;z-index:1}
+#start-screen .story-hook{color:#b7c7cd}
+#start-screen .start-copy h1 em{color:#d8ef96}
+#start-btn{font-size:19px!important;background:#d8ef96!important;color:#14242b!important;border:1px solid #cce68b!important;box-shadow:0 4px 0 #657d47!important;padding:17px 25px!important}
+#start-btn:hover{background:#e9ffad!important}
+#boss-intro{background:linear-gradient(100deg,#07121ef9,#0b101bf7)!important;overflow:hidden}
+#boss-intro .boss-sigil{display:none!important}
+#legacy-boss-portrait{position:absolute;width:560px;height:590px;object-fit:contain;left:30px;top:50%;transform:translateY(-50%);animation:legacy-boss-breathe 3s ease-in-out infinite;filter:drop-shadow(0 0 20px #829ec222)}
+#boss-intro>p,#boss-intro>h2,#boss-intro>small{position:relative!important;left:280px!important;max-width:590px!important;text-align:left!important;z-index:1}
+#boss-intro>h2{font-size:48px!important;color:#e3e8df!important;text-shadow:none!important}
+#boss-hud .boss-track{height:22px!important;background:#15232d!important;border:2px solid #33474e!important}
+@keyframes legacy-boss-breathe{0%,100%{transform:translateY(-49%) rotate(-1deg)}50%{transform:translateY(-51%) rotate(1deg)}}
+@media(prefers-reduced-motion:reduce){#legacy-boss-portrait{animation:none}}
+#start-screen .start-copy h1{text-shadow:none!important;filter:none!important}
+#legacy-boss-portrait{visibility:hidden}#legacy-portrait-rig{position:absolute;width:560px;height:590px;left:30px;top:50%;transform:translateY(-50%);filter:drop-shadow(0 0 20px #829ec222)}
+.campaign-promise{color:#adbfba;font-size:11px;letter-spacing:2px;margin:0 0 24px}.campaign-promise span{color:#d8ef96;padding:0 9px}
+.story-copy h2{text-shadow:none;font-size:41px;line-height:1.25}.story-copy blockquote{font-size:14px;line-height:1.9}.weapon-card p{font-size:12px;line-height:1.7}
+#story-prev{border:1px solid #3e5665;background:#0b1824;color:#aec9d4;padding:10px 13px;cursor:pointer;white-space:nowrap}#story-prev:disabled{opacity:.3;cursor:default}.story-actions{gap:12px}.story-actions .primary{min-width:170px}
+.scene-boss .memory-rings,.scene-boss #weapon-schematic,.scene-boss #weapon-code{display:none!important}.scene-boss .story-copy{padding-left:32px}.scene-boss .story-copy h2{font-size:38px}.scene-boss .weapon-card>span{flex-shrink:0;font:700 22px Consolas}
+#boss-demo[hidden]{display:none}#boss-demo{--threat:#ffb759;position:absolute;inset:12px 0 12px -18px;display:flex;flex-direction:column;background:radial-gradient(ellipse at 50% 50%,#1c2c3666,transparent 65%),linear-gradient(135deg,#101d28d9,#040a12e6);border:1px solid #344a57;border-top:2px solid var(--threat);overflow:hidden}
+#boss-demo header{display:flex;justify-content:space-between;padding:18px 20px 0;color:#d1e2e5;font-size:12px;letter-spacing:2px}#boss-demo header b{color:var(--threat);font:11px Consolas}
+#boss-demo-canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none}
+.boss-demo-caption{position:absolute;bottom:64px;left:20px;right:20px;display:flex;align-items:center;gap:10px;background:#07101bde;padding:12px;border-left:2px solid var(--threat)}.boss-demo-caption span{font-size:11px;color:var(--threat);white-space:nowrap}.boss-demo-caption strong{font-size:13px;font-weight:500;color:#e0e9e6}
+.boss-demo-controls{position:absolute;bottom:16px;left:20px;right:20px;display:flex;align-items:center;gap:10px}.boss-demo-controls button{border:1px solid #405766;background:#11222f;color:#c8dde3;padding:8px 10px;font-size:11px;cursor:pointer}.boss-demo-controls button:hover{border-color:var(--threat);color:var(--threat)}.boss-demo-controls small{margin-left:auto;color:#96afb9;font-size:10px;white-space:nowrap}
+.story-scene.switching.transition-burrow{animation:archiveRise .6s ease-out}.story-scene.switching.transition-blades{animation:archiveUnfold .55s ease-out}.story-scene.switching.transition-landing{animation:archiveLand .5s ease-out}
+@keyframes archiveRise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}@keyframes archiveUnfold{from{opacity:0;transform:perspective(1200px) rotateY(-8deg) scale(.97)}to{opacity:1;transform:none}}@keyframes archiveLand{0%{opacity:0;transform:translateY(-18px)}75%{opacity:1;transform:translateY(3px)}100%{transform:none}}
+@media(prefers-reduced-motion:reduce){.story-scene.switching{animation:none!important}}
+/* Desktop information hierarchy: readable without covering the boss or fullscreen control. */
+#relic-array{top:236px;width:190px}#relic-array>div{font-size:10px}#relic-count{font-size:11px}#relic-slots{grid-template-columns:repeat(6,24px);gap:5px}#relic-slots i{width:24px;height:24px;font-size:13px}
+#hud{height:92px;padding-top:15px}.eyebrow{font-size:12px;letter-spacing:1px}.battery-meta b{font-size:15px}.battery-meta small{font-size:9px}.shield-line{font-size:11px}.shield-line b{font-size:12px}.resources{gap:22px}.resources b{font-size:24px}.resources small{font-size:10px}.resources i{font-size:25px}.resources>span{grid-template-columns:24px 42px;grid-template-rows:27px 15px}
+#minimap{position:absolute;right:24px;top:92px;width:300px;height:132px;background:linear-gradient(135deg,#091521ed,#060d16e8);border:1px solid #608d9a;border-top:2px solid #76dedf;box-shadow:0 4px 15px #0008;transform:none}
+#minimap:before{content:'区域地图';position:absolute;left:12px;top:9px;color:#cff4ee;font-size:12px;letter-spacing:3px}#minimap:after{content:'实心：当前位置　粉色：Boss　金色：遗物';position:absolute;left:11px;bottom:8px;color:#c0d4d8;font-size:10px;letter-spacing:0}
+#minimap .map-room{width:28px;height:20px;border-width:2px}#minimap .map-room.current{border-color:white;background:#79ffef;box-shadow:0 0 0 2px #1e464c,0 0 10px #79ffef77}#minimap .map-room.boss:after{content:'B';position:absolute;inset:0;text-align:center;font:900 12px Consolas;color:#ff7fac}#minimap .map-room.treasure:after{content:'◆';position:absolute;inset:0;text-align:center;font-size:10px;color:#ffe34c}
+#boss-hud{top:88px;width:530px}#boss-hud>div:first-child{font-size:15px;letter-spacing:1px}#boss-phase{font-size:12px}#boss-hud .boss-track{position:relative;height:24px!important;border-radius:3px;overflow:hidden}#boss-hud .boss-track:before,#boss-hud .boss-track:after{content:'';position:absolute;z-index:2;top:0;bottom:0;width:2px;background:#fff9}#boss-hud .boss-track:before{left:33%}#boss-hud .boss-track:after{left:66%}.boss-meta{display:flex;justify-content:space-between;margin-top:5px;font-size:12px;color:#e5c1c9}.boss-meta b{color:#fff;font-size:13px}#boss-hud.protected .boss-track i{background:repeating-linear-gradient(120deg,#4b909b 0 10px,#8ae4dd 10px 20px);box-shadow:none}#boss-hud.protected #boss-status{color:#9df9ee}
+@media(max-width:1100px){#minimap{right:14px;top:150px;transform:scale(.86);transform-origin:top right}#boss-hud{width:440px}.vitals{width:280px}.resources{left:55%}}
